@@ -37,7 +37,7 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = PHOTO
-    starttext = f"Hello, **{firstname}**!!\nNice To Meet You 🤗 !!\nI guess, that you know me, Uhh you don't, np..\nWell I'm **{bot_id}**.\n\n**A Pᴏᴡᴇʀғᴜʟ Assɪᴛᴀɴᴛ Oғ** [{hmmwow}](tg://user?id={boy})\n\n                           **Pᴏᴡᴇʀᴇᴅ Bʏ** [UʟᴛʀᴀX](t.me/UltraXOT)\n\n**Yᴏᴜ Cᴀɴ Cʜᴀᴛ Wɪᴛʜ Mʏ Mᴀsᴛᴇʀ Tʜʀᴏᴜɢʜ Tʜɪs Bᴏᴛ.**\n**Iғ Yᴏᴜ Wᴀɴᴛ Yᴏᴜʀ Oᴡɴ Assɪᴛᴀɴᴛ Yᴏᴜ Cᴀɴ Dᴇᴘʟᴏʏ Fʀᴏᴍ Bᴜᴛᴛᴏɴ Bᴇʟᴏᴡ.**"
+    starttext = f"Hello, **{firstname}**! I'm **{bot_id}**. Bot by @ppnaravxt. You can PM @ppnaravxt here! "
     if event.sender_id == boy:
         await xbot.send_message(
             event.chat_id,
@@ -63,8 +63,7 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.url("Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ UʟᴛʀᴀX", "http://GitHub.com/ULTRA-OP/ULTRA-X")],
-                [Button.url("Sᴜᴘᴘᴏʀᴛ", "t.me/UltraXchaT")],
+                [custom.Button.url("Follow my channel!", "http://t.me/saibubo")],
             ],
         )
         if os.path.exists(mypic):
@@ -121,7 +120,7 @@ async def all_messages_catcher(event):
                 )
             )
         except telethon.errors.rpcerrorlist.UserNotParticipantError:
-            await event.reply(f"**Opps, I Couldn't Forward That Message To Owner. Please Join My Channel First And Then Try Again!**",
+            await event.reply(f"**Oops, I couldn't forward that message to Owner. Follow my Channel first and then Try Again!**",
                              buttons = [Button.url("Join Channel", Config.JTM_CHANNEL_USERNAME)])
             return
     await event.get_sender()
@@ -198,7 +197,7 @@ async def _(event):
     pro = await bot.get_me()
     boy = pro.id
     if not event.sender_id == boy:
-       return await event.reply("you cant access this")
+       return await event.reply("You can't access this.")
     all = get_all_users()
     await event.reply(
         f"**Stats Of Your Bot**\nTotal Users In Bot => {len(all)}"
