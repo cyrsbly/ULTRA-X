@@ -57,7 +57,7 @@ async def cmd_list(event):
 
                         allow_cache=False,
 
-                        caption="¢σммαη∂ѕ ιη υℓтяα χ вσт",
+                        caption="Commands in Mork's Bot.",
 
                         reply_to=reply_to_id
 
@@ -85,13 +85,13 @@ async def cmd_list(event):
 
             else:
 
-                await event.edit(input_str + " ɪs ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ Pʟᴜɢɪɴ")
+                await event.edit(input_str + " Is not a Valid Plugin!")
 
         else:
 
-            help_string = f""" υℓтяα χ вσт Hᴇʟᴘ ᴘʀᴏᴠɪᴅᴇᴅ ʙʏ тєαм υℓтяα χ\n
+            help_string = f""" Help provided by @ppnaravxt\n
 
-Dᴏ `.help` PLUGIN_NAME ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs, ɪғ ɪɴ ᴄᴀsᴇ Pᴏᴘ-Uᴘ ᴅᴏᴇsɴ'ᴛ ᴀᴘᴘᴇᴀʀ."""
+Dᴏ `.help` PLUGIN_NAME for command help."""
 
             results = await bot.inline_query(  # pylint:disable=E0602
 
@@ -145,7 +145,7 @@ async def _(event):
 
     logger.info(result)  # pylint:disable=E0602
 
-    await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву υℓтяα χ вσт")
+    await event.edit("Telethon based Userbot by @ppnaravxt")
 
 
 
@@ -167,23 +167,23 @@ async def _(event):
 
         help_string = CMD_LIST[plugin_name].doc
 
-        unload_string = f"Usᴇ `.unload` {plugin_name} ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜɪs Pʟᴜɢɪɴ.\n           Â© υℓтяα χ"
+        unload_string = f"Use `.unload` {plugin_name} to remove this plugin."
 
         
 
         if help_string:
 
-            plugin_syntax = f"Sʏɴᴛᴀx ғᴏʀ ᴘʟᴜɢɪɴ {plugin_name}:\n\n{help_string}\n{unload_string}"
+            plugin_syntax = f"Syntax for plugin {plugin_name}:\n\n{help_string}\n{unload_string}"
 
         else:
 
-            plugin_syntax = f"Nᴏ DOCSTRING ʜᴀs ʙᴇᴇɴ sᴇᴛᴜᴘ ғᴏʀ {plugin_name} Pʟᴜɢɪɴ."
+            plugin_syntax = f"Nᴏ DOCSTRING has been setup for {plugin_name}."
 
     else:
 
 
 
-        plugin_syntax = "Eɴᴛᴇʀ ᴠᴀʟɪᴅ Pʟᴜɢɪɴ ɴᴀᴍᴇ.\nDᴏ `.plinfo` ᴏʀ `.help` ᴛᴏ ɢᴇᴛ ʟɪsᴛ ᴏғ ᴠᴀʟɪᴅ Pʟᴜɢɪɴ ɴᴀᴍᴇs."
+        plugin_syntax = "Enter valid Plugin name. \nDᴏ `.plinfo` ᴏʀ `.help` to get list  of valid Plugin names."
 
 
 
