@@ -21,7 +21,7 @@ else:
     HMM_LOL = SPAM
 from ..import bot
 from ULTRAX import xbot
-FUCK_OFF_WARN = f"**Blocked You As You Spammed {ULTRA_USER}'s DM\n\n **IDC**"
+FUCK_OFF_WARN = f"**You have been blocked due to spamming.** RIP!"
 async def LEGENDX(event, msg):
   global ULTRA_WRN
   if ULTRA_PROTECTION == "off" or ULTRA_PROTECTION is "off":
@@ -36,7 +36,7 @@ async def LEGENDX(event, msg):
   await LEGENDX[0].click(event.chat_id)
   ULTRA_WRN[event.chat_id] += 1
   if ULTRA_WRN[event.chat_id] == HMM_LOL:
-    await event.reply("**Hᴇʏ ɴᴏᴏʙ ᴛʜɪs ɪs ʏᴏᴜʀ ʟᴀsᴛ ᴄʜᴀɴᴄᴇ, sᴘᴀᴍ = ʙʟᴏᴄᴋ**")
+    await event.reply("**Hey!** This is your last chance, do not spam!")
     await bot (block (event.chat_id))
     del ULTRA_WRN
   
@@ -68,7 +68,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
                     ULTRA_X.approve(chat.id, "outgoing")
 
-                    bruh = "Aᴜᴛᴏ Aᴘᴘʀᴏᴠᴇᴅ Bᴄᴜᴢ ᴏᴜᴛɢᴏɪɴɢ 😁😁"
+                    bruh = "Auto Approved!"
 
                     rko = await borg.send_message(event.chat_id, bruh)
 
